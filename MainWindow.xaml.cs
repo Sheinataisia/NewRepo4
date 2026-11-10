@@ -23,7 +23,7 @@ namespace Sheina41
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new ProductPage());
+            MainFrame.Navigate(new AuthPage1());
             Manager1.MainFrame = MainFrame;
         }
 
@@ -34,6 +34,7 @@ namespace Sheina41
 
         private void MainFrame_ContentRendered(object sender, EventArgs e)
         {
+            BtnBack.Visibility = Visibility.Visible;
             if(MainFrame.CanGoBack)
             {
                 BtnBack.Visibility = Visibility.Visible;
@@ -42,6 +43,11 @@ namespace Sheina41
             {
                 BtnBack.Visibility = Visibility.Hidden;
             }
+        }
+
+        private void MainFrame_ContentRendered_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
